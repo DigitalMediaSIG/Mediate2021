@@ -135,7 +135,7 @@
         <div class="col-lg-8 mx-auto">
           <h2>Overview</h2>
           <p class="lead">The second Mediate workshop will be held virtually on <em
-              class="lead text-center font-weight-bold" id="confTime"></em>, as part of the <a
+              class="lead text-center font-weight-bold">June 7</em>, as part of the <a
               href="https://www.icwsm.org/2021/index.html">International AAAI Conference on Web and Social Media
               (ICWSM)</a>. The main goal of the workshop is to bring together media practitioners and technologists to
             discuss new opportunities and obstacles that arise in the modern era of information diffusion. This year's
@@ -337,29 +337,25 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Schedule</h2>
-          <h4>TBD</h4>
-          <!-- Date: June 8th 2020. All times are in <a href="https://time.is/EDT">Eastern Daylight Time</a>.
+          Date & Time: <em class="font-weight-bold" id="confTime"></em>
             <ul>
-              <li class="nobul"><u>14:00-14:15</u> Welcome</li>
-              <li class="nobul"><b><em>Invited Talks - Social Initiatives against Misinformation</em></b></li>
-              <li class="nobul"><u>14:15-14:35</u> <b>Rasmus Kleis Nielsen.</b> Oxford University & Reuters Institute. <em>Empirical evidence for how news and digital media help people inform themselves (and sometimes leave them misinformed).</em></li>
-              <li class="nobul"><u>14:35-14:55</u> <b>Amy X. Zhang.</b> University of Washington. <em>Research and Initiatives in Crowdsourcing News Credibility.</em></li>
-              <li class="nobul"><u>14:55-15:15</u> <b>Juliane von Reppert-Bismarck.</b> Lie Detectors. <em>Tackling the Infodemic: Lie Detectors and media literacy solutions in an age of coronavirus</em></li>
-              <li class="nobul"><u>15:15-15:35</u> Break</li>
-              <li class="nobul"><u>15:35-16:10</u> <b><em>Contributed Talks</em></b></li>
+              <li class="nobul">5 min <b>Intro</b></li>
+              <li class="nobul"><b><em>Invited Session 1 (20 min talk + 5 min Q&A)</em></b></li>
+              <li class="nobul"><u id="mevanTime"></u> <b>Mevan Babakar.</b> <em>TBD</em></li>
+              <li class="nobul"><u id="davidTime"></u> <b>David Leslie.</b> <em>TBD</em></li>
+              <li class="nobul"><u id="ramshaTime"></u> <b>Ramsha Jahangir.</b> <em>Social media and public interest: Content regulation in the digital age.</em></li>
+              <li class="nobul">10 min <b>break</b></li>
+              <li class="nobul"><b><em>Contributed Session (10 min talk + 2 min Q&A)</em></b></li>
 	          <ul>
-              	<li class="nobul"><b><u>Antonia Saravanou</u>, Giorgio Stefanoni, and Edgar Meij.</b> <em>Ranking Notable News Stories.</em> [<a href="papers/Mediate_2020_accepted_paper_1.pdf">pdf</a>]</li>
-              	<li class="nobul"><b><u>Elena Kochkina</u>, Maria Liakata, and Arkaitz Zubiaga.</b> <em>Stance Classification for Rumour Verification in Social Media Conversations.</em> [<a href="papers/Mediate_2020_accepted_paper_2.pdf">pdf</a>]</li>
-              	<li class="nobul"><b>Felipe Cardoso, <u>Luca Luceri</u>, and Silvia Giordano.</b> <em>Digital Weapons in Social Media Manipulation Campaigns.</em> [<a href="papers/Mediate_2020_accepted_paper_3.pdf">pdf</a>]</li>
-            </ul>	    
-              <li class="nobul"><u>16:10-16:30</u> Break</li>
-              <li class="nobul"><b><em>Invited Talks - Political and Scientific Misinformation</em></b></li>
-              <li class="nobul"><u>16:30-16:50</u> <b>Filippo Menczer.</b> Indiana University & Observatory on Social Media. <em>4 Reasons Why Social Networks Make Us Vulnerable to Misinformation.</em></li>
-              <li class="nobul"><u>16:50-17:10</u> <b>Sibel Adali.</b> Rensselaer Polytechnic Institute. <em>Revisiting trust for better interaction with information.</em></li>
-              <li class="nobul"><u>17:10-17:30</u> <b>Ivan Oransky.</b> Medscape & Retraction Watch. <em>Does Science Self-Correct? What We've Learned At Retraction Watch.</em>
-              </li>
-              <li class="nobul"><u>17:30-17:45</u> Closing</li>
-            </ul> -->
+              	<!-- <li class="nobul"><b><u>Antonia Saravanou</u>, Giorgio Stefanoni, and Edgar Meij.</b> <em>Ranking Notable News Stories.</em> [<a href="papers/Mediate_2020_accepted_paper_1.pdf">pdf</a>]</li> -->
+            </ul>
+            <li class="nobul">10 min <b>break</b></li>
+            <li class="nobul"><b><em>Invited Session 2 (20 min talk + 5 min Q&A)</em></b></li>
+            <li class="nobul"><u id="rasmusTime"></u> <b>Rasmus Kleis Nielsen.</b> <em>TBD</em></li>
+            <li class="nobul"><u id="kristinaTime"></u> <b>Kristina Lerman.</b> <em>Geography of the Mistrust of Science.</em></li>
+            <li class="nobul"><u id="chrisTime"></u> <b>Chris Bregler.</b> <em>Context is everything: On Manipulated Media, Context Retargeting, and Misinformation Mitigation.</em></li>
+            <li class="nobul">5 min <b>Outro</b></li>
+            </ul>
         </div>
       </div>
     </div>
@@ -568,7 +564,21 @@
   <script>
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var date = new Date('06/07/2021 01:00:00 PM UTC');
-    document.getElementById("confTime").innerHTML = months[date.getMonth()].concat(', ', date.getDate(), ' at ', date.getHours(), ':00 (', Intl.DateTimeFormat().resolvedOptions().timeZone, ')');
+    document.getElementById("confTime").innerHTML = months[date.getMonth()].concat(', ', date.getDate(), ' at ', (date.getHours()<10?'0':''), date.getHours(), ':00 (', Intl.DateTimeFormat().resolvedOptions().timeZone, ')');
+    var date = new Date('06/07/2021 01:05:00 PM UTC');
+    document.getElementById("mevanTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/07/2021 01:30:00 PM UTC');
+    document.getElementById("davidTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/07/2021 01:55:00 PM UTC');
+    document.getElementById("ramshaTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/07/2021 03:40:00 PM UTC');
+    document.getElementById("rasmusTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/07/2021 04:05:00 PM UTC');
+    document.getElementById("kristinaTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/07/2021 04:30:00 PM UTC');
+    document.getElementById("chrisTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+
+
   </script>
 </body>
 
